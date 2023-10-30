@@ -6,8 +6,8 @@ class Rectangle:
     '''Defining class rectangle'''
     def __init__(self, width=0, height=0):
         '''initializing the init method'''
-        self._width = width
-        self._height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -22,12 +22,12 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
-            self._width = value
+            self.__width = value
 
     @property
     def height(self):
         '''retriving height'''
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -37,4 +37,4 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
-            self._height = value
+            self.__height = value
