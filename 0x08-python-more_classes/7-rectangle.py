@@ -5,7 +5,7 @@
 class Rectangle:
     '''class attribute public'''
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     '''defining a class'''
     def __init__(self, width=0, height=0):
@@ -81,6 +81,4 @@ class Rectangle:
         '''called when an instance is deleted'''
         print("Bye rectangle...")
         if Rectangle.number_of_instances > 0:
-            Rectangle.number_of_instances -= 1
-
-    
+            Rectangle.number_of_instances -= 1 
