@@ -77,7 +77,4 @@ class Rectangle:
     def __del__(self):
         '''called when an instance is deleted'''
         print("Bye rectangle...")
-        if Rectangle.number_of_instances <= 0:
-            print("No instances to decrement")
-        else:
-            Rectangle.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
