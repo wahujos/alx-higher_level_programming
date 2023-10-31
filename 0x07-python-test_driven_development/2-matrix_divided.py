@@ -2,6 +2,8 @@
 '''
 a function that divides all elements of a matrix
 '''
+
+
 def matrix_divided(matrix, div):
     new_matrix = []
     if not matrix:
@@ -18,7 +20,8 @@ def matrix_divided(matrix, div):
         new_row = []
         for value in row:
             if not isinstance(value, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError
+            ("matrix must be a matrix (list of lists) of integers/floats")
             res = value / div
             new_row.append(round(res, 2))
         new_matrix.append(new_row)
