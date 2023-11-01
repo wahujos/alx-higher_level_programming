@@ -61,7 +61,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return rectangle
         else:
-            return '\n'.join([str(self.print_symbol) * self.__width] * self.__height)
+            return '\n'.join(
+                    [str(self.print_symbol) * self.__width] * self.__height
+                    )
 
     def __repr__(self):
         '''repr method'''
@@ -74,4 +76,4 @@ class Rectangle:
         '''called when an instance is deleted'''
         print("Bye rectangle...")
         if Rectangle.number_of_instances > 0:
-            Rectangle.number_of_instances -= 1 
+            Rectangle.number_of_instances -= 1
