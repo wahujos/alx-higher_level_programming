@@ -31,6 +31,7 @@ def solve_n_queens(n):
             print([i, col], end=" ")
         print()
 
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 2:
