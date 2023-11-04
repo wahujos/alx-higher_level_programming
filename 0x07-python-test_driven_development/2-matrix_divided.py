@@ -5,6 +5,7 @@ a function that divides all elements of a matrix
 
 
 def matrix_divided(matrix, div):
+    '''documenting function'''
     new_matrix = []
     if not matrix:
         raise Exception

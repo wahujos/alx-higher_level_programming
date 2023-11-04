@@ -5,6 +5,7 @@ text indentation
 
 
 def text_indentation(text):
+    ''' documenting function'''
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     characters_given = [".", "?", ":"]
