@@ -13,3 +13,9 @@ for the add_integer function.
 
 >>> add_integer(100.3, -2)
 98
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(1, -2)
+-1
