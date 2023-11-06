@@ -1,0 +1,26 @@
+we get the python file
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> print(my_list)
+[1, 2]
+
+>>> other_list = []
+>>> print(other_list)
+
+
+>>> lists1 = [5, 5, 5, 2, 2, 2]
+>>> print(lists1)
+[2, 2, 2, 5, 5, 5]
+
+
+>>> lists2 = [1, 2, 0, -1]
+print(lists2)
+[-1, 0, 1, 2]
+
+>>> lists3 = [4]
+print(lists3)
+[4]
