@@ -1,4 +1,4 @@
-0x0A. Python - Inheritance
+#0x0A. Python - Inheritance
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
