@@ -8,19 +8,20 @@ we get the python file
 >>> print(my_list)
 [1, 2]
 
->>> other_list = []
->>> print(other_list)
+>>> other_list = MyList()
+>>> other_list.print_sorted()
+[]
 
 
->>> lists1 = [5, 5, 5, 2, 2, 2]
->>> print(lists1)
+>>> lists1 = MyList([5, 5, 5, 2, 2, 2])
+>>> lists1.print_sorted()
 [2, 2, 2, 5, 5, 5]
 
 
->>> lists2 = [1, 2, 0, -1]
-print(lists2)
+>>> lists2 = MyList([1, 2, 0, -1])
+>>> lists2.print_sorted()
 [-1, 0, 1, 2]
 
 >>> lists3 = [4]
-print(lists3)
+>>> print(lists3)
 [4]
