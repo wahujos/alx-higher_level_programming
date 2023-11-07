@@ -49,3 +49,18 @@ TypeError: age must be an integer
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
+
+
+>>> baseg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+
+>>> baseg.integer_validator("age", 4)
+
+
+>>> baseg.integer_validator("age", True)
+
+
+>>> baseg.integer_validator("age", 1) 
