@@ -1,0 +1,143 @@
+#!/usr/bin/python3
+"""handle module documentations"""
+import unittest
+from models.rectangle import Rectangle
+from io import StringIO
+import sys
+"""handling various files needed fot the tests"""
+
+
+class Test_Rectangele(unittest.TestCase):
+    """defining the class that inherits from the unittest"""
+    def test_initialization(self):
+        """ testing initialization of the function"""
+        rect1 = Rectangle(10, 20, 5, 6, 1)
+        self.assertEqual(rect1.width, 10)
+        self.assertEqual(rect1.height, 20)
+        self.assertEqual(rect1.x, 5)
+        self.assertEqual(rect1.y, 6)
+        self.assertEqual(rect1.id, 1)
+
+    def test_width_property(self):
+        """testing the width property"""
+        rect1 = Rectangle(10, 20, 5, 6, 1)
+        rect1.width = 12
+        self.assertEqual(rect1.width, 12)
+
+    def test_height_property(self):
+        rect1 = Rectangle(10, 20, 5, 6, 1)
+        rect1.height = 22
+        self.assertEqual(rect1.height, 22)
+
+    def test_x_property(self):
+        rect1 = Rectangle(10, 20, 5, 6, 1)
+        rect1.x = 8
+        self.assertEqual(rect1.x, 8)
+
+    def test_y_property(self):
+        rect1 = Rectangle(10, 20, 5, 6, 1)
+        rect1.y = 15
+        self.assertEqual(rect1.y, 15)
+
+    def test_invalid_width(self):
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle("10", 20, 5, 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle([10], 20, 5, 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle({10}, 20, 5, 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle((10, ), 20, 5, 6, 1)
+
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(-1, 20, 5, 6, 1)
+
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(0, 20, 5, 6, 1)
+
+    def test_invalid_height(self):
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, "20", 5, 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, [20], 5, 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, {20}, 5, 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, (20, ), 5, 6, 1)
+
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(10, -20, 5, 6, 1)
+
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(10, 0, 5, 6, 1)
+
+    def test_invalid_x(self):
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, "5", 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, [5], 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, {5}, 6, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, (5, ), 6, 1)
+
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(10, 20, -5, 6, 1)
+
+    def test_invalid_y(self):
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, 5, "6", 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, 5, [6], 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, 5, {6}, 1)
+
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(10, 20, 5, (6, ), 1)
+
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(10, 20, 5, -6, 1)
+
+    def test_area_instance(self):
+        rect1 = Rectangle(10, 20)
+        self.assertEqual(rect1.area(), 200)
+
+        rect1.width = 15
+        rect1.height = 25
+        self.assertEqual(rect1.area(), 375)
+
+        rect2 = Rectangle(10000, 100000)
+        self.assertEqual(rect2.area(), 1000000000)
+
+    def setUp(self):
+        self.saved_stdout = sys.stdout
+        sys.stdout = StringIO()
+
+    def tearDown(self):
+        sys.stdout = self.saved_stdout
+
+    def test_display_rectangle_output(self):
+        rect1 = Rectangle(3, 4)
+        rect1.display()
+        self.assertEqual(sys.stdout.getvalue(), '###\n###\n###\n###\n')
+
+    def test__str__(self):
+        rect1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(rect1.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+
+        rect2 = Rectangle(5, 5, 1, 0, 4)
+        self.assertEqual(rect2.__str__(), "[Rectangle] (4) 1/0 - 5/5")
+
+    if __name__ == '__main__':
+        unittest.main()
