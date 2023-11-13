@@ -3,6 +3,7 @@
 import json
 """handling json files"""
 
+
 class Base:
     """Defining class Base"""
     __nb_objects = 0
@@ -28,7 +29,7 @@ class Base:
         if list_objs is None:
             list_objs = []
         filename = "{}.json".format(cls.__name__)
-        with open(filename, mode = 'w', encoding="UTF8") as f:
+        with open(filename, mode='w', encoding="UTF8") as f:
             obj_dicts = [obj.to_dictionary() for obj in list_ojs]
             json_str = cls.to_json_string(obj_dicts)
             f.write(json_str)

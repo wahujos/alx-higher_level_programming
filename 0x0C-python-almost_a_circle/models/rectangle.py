@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-'''Handle modules'''
+'''Handle modules and any other stuff'''
 from models.base import Base
+'''Getting information about the base'''
 
 
 class Rectangle(Base):

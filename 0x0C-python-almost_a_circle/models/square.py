@@ -15,7 +15,7 @@ class Square(Rectangle):
         s_y = self.y
         s_s = self.width
         return "[{}] ({}) {}/{} - {}".format(c_name, s_id, s_x, s_y, s_s)
-    
+
     @property
     def size(self):
         return self.width
@@ -35,7 +35,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        return {'id' : self.id,
+        return {'id': self.id,
                 'size': self.width,
                 'x': self.x,
                 'y': self.y
