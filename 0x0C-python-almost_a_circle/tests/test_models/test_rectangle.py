@@ -25,21 +25,25 @@ class Test_Rectangele(unittest.TestCase):
         self.assertEqual(rect1.width, 12)
 
     def test_height_property(self):
+        '''Testing the height property'''
         rect1 = Rectangle(10, 20, 5, 6, 1)
         rect1.height = 22
         self.assertEqual(rect1.height, 22)
 
     def test_x_property(self):
+        '''Testing the x property'''
         rect1 = Rectangle(10, 20, 5, 6, 1)
         rect1.x = 8
         self.assertEqual(rect1.x, 8)
 
     def test_y_property(self):
+        '''Testing the y property'''
         rect1 = Rectangle(10, 20, 5, 6, 1)
         rect1.y = 15
         self.assertEqual(rect1.y, 15)
 
     def test_invalid_width(self):
+        '''Testing the invalid width'''
         with self.assertRaises(TypeError):
             rect1 = Rectangle("10", 20, 5, 6, 1)
 
@@ -59,6 +63,7 @@ class Test_Rectangele(unittest.TestCase):
             rect1 = Rectangle(0, 20, 5, 6, 1)
 
     def test_invalid_height(self):
+        '''Testing the invalid height'''
         with self.assertRaises(TypeError):
             rect1 = Rectangle(10, "20", 5, 6, 1)
 
@@ -78,6 +83,7 @@ class Test_Rectangele(unittest.TestCase):
             rect1 = Rectangle(10, 0, 5, 6, 1)
 
     def test_invalid_x(self):
+        '''Testing the invalid x'''
         with self.assertRaises(TypeError):
             rect1 = Rectangle(10, 20, "5", 6, 1)
 
@@ -94,6 +100,7 @@ class Test_Rectangele(unittest.TestCase):
             rect1 = Rectangle(10, 20, -5, 6, 1)
 
     def test_invalid_y(self):
+        '''Testing the invalid y'''
         with self.assertRaises(TypeError):
             rect1 = Rectangle(10, 20, 5, "6", 1)
 
@@ -110,6 +117,7 @@ class Test_Rectangele(unittest.TestCase):
             rect1 = Rectangle(10, 20, 5, -6, 1)
 
     def test_area_instance(self):
+        '''testing for the area function'''
         rect1 = Rectangle(10, 20)
         self.assertEqual(rect1.area(), 200)
 
@@ -195,6 +203,7 @@ class Test_Rectangele(unittest.TestCase):
             rect4.update(10, {20}, 30, 35, 40)
 
     def test_update_kwags(self):
+        '''testing the update kwags'''
         rect1 = Rectangle(1, 2, 3, 4, 5)
         rect1.update(id=10, width=15, height=20, x=2, y=3)
         self.assertEqual(rect1.id, 10)

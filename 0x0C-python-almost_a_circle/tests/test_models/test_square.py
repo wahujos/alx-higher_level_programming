@@ -8,10 +8,12 @@ import unittest
 class TestSquare(unittest.TestCase):
     """defining the class that will hold the tests for the square"""
     def test_size_getter(self):
+        '''testing getter for the size'''
         sqr = Square(5)
         self.assertEqual(sqr.size, 5)
 
     def test_size_setter(self):
+        '''testing setter for the size'''
         sqr = Square(5)
         sqr.size = 10
         self.assertEqual(sqr.size, 10)
