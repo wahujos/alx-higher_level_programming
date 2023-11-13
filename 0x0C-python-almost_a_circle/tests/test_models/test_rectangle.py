@@ -18,7 +18,27 @@ class Test_Rectangele(unittest.TestCase):
         self.assertEqual(rect1.x, 5)
         self.assertEqual(rect1.y, 6)
         self.assertEqual(rect1.id, 1)
+    
+    def test_rectangle_is_base(self):
+        """testing whether rectangle is a child class to base"""
+        self.assertIsInstance(Rectangle(5, 6), Base)
 
+    def test_no_args(self):
+        '''testing the rectangle when no argument is passed'''
+        with self.assertRaises(TypeError):
+            Rectangle()
+        
+    def test_one_arg(self):
+        '''testing the rectangle incase of one argument passed'''
+        with self.assertRaises(TypeError):
+            Rectangle(1)
+
+    def test_two_args(self):
+        '''Testing the rectangle incase of two arguments passed'''
+        r1 = Rectangle(10, 2)
+        r2 = Rectangle(2, 10)
+        self.assertEqual(r1.id, r2.id - 1)
+    
     def test_width_property(self):
         """testing the width property"""
         rect1 = Rectangle(10, 20, 5, 6, 1)
