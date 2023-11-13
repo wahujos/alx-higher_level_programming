@@ -2,6 +2,7 @@
 """handle module documentations"""
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 from io import StringIO
 import sys
 """handling various files needed fot the tests"""
@@ -9,7 +10,7 @@ import sys
 
 class Test_Rectangele(unittest.TestCase):
     """defining the class that inherits from the unittest"""
-    def test_initialization(self):
+    def test__init__(self):
         """ testing initialization of the function"""
         rect1 = Rectangle(10, 20, 5, 6, 1)
         self.assertEqual(rect1.width, 10)

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """handle module imports"""
+from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 import unittest
