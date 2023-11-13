@@ -80,10 +80,36 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        for i in range(self.__height):
+        """for i in range(self.__height):
             for j in range(self.__width):
                 print("#", end='')
+            print()"""
+        for _ in range(self.y):
             print()
+        for i in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
-        return "[{}] ({}) {}/{} - {}/{}".format(__class__.__name__, self.id, self.x, self.y, self.width, self.height) 
+        c_name = __class__.__name__
+        s_id = self.id
+        x1 = self.x
+        y1 = self.y
+        w1 = self.width
+        h1 = self.height
+        return "[{}] ({}) {}/{} - {}/{}".format(c_name, s_id, x1, y1, w1, h1)
+
+    def update(self, *args, **kwags):
+        if args:
+            attributes_given = ['id', 'width', 'height', 'x', 'y']
+            for i, value in enumerate(args):
+                setattr(self, attributes_given[i], value)
+        elif kwags:
+            for key, value in kwags.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        return {'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y}
