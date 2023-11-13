@@ -204,7 +204,7 @@ class Test_Rectangele(unittest.TestCase):
         self.assertEqual(rect1.y, 3)
 
         rect2 = Rectangle(1, 2, 3, 4, 5)
-        rect2.update(width= 10, x=4, y=5, id=8, height=20)
+        rect2.update(width=10, x=4, y=5, id=8, height=20)
         self.assertEqual(rect2.id, 8)
         self.assertEqual(rect2.width, 10)
         self.assertEqual(rect2.height, 20)
