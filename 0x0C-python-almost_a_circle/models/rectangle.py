@@ -10,6 +10,8 @@ class Rectangle(Base):
         """defining the initialization method defining
         the initialization method"""
         super().__init__(id)
+        """super class with super capabilities super
+        class with super capabilities"""
         self.width = width
         self.height = height
         self.x = x
@@ -21,6 +23,7 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
+    """place holder documentation place holder documentation """
     def width(self, value):
         """place holder documentation place holder documentation """
         if not isinstance(value, int):
@@ -30,6 +33,7 @@ class Rectangle(Base):
         self.__width = value
 
     @property
+    """place holder documentation place holder documentation """
     def height(self):
         """place holder documentation place holder documentation """
         return self.__height
@@ -76,10 +80,12 @@ class Rectangle(Base):
         Calculate and return the area of the rectangle.
 
         Returns:
-        - The area of the rectangle.
+        - int: The area of the rectangle.
+
         """
         return self.__width * self.__height
 
+    """place holder documentation place holder documentation """
     def display(self):
         """This is the function responsible for display of the shape in
         different ways whether with or without offset."""
