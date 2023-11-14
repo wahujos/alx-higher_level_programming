@@ -8,7 +8,6 @@ from models.base import Rectangle
 class Square(Rectangle):
     """defining the class square that inherits from Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
-        """place holder documentation place holder documentation """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
