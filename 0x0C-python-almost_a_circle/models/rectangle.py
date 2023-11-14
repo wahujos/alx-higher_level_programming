@@ -81,7 +81,7 @@ class Rectangle(Base):
         Returns:
         - The area of the rectangle.
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """This is the function responsible for display of the shape in
