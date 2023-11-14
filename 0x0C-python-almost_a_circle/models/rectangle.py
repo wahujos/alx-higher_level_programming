@@ -76,8 +76,13 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """place holder documentation place holder documentation
-        123456789"""
+        """
+        Calculate and return the area of the rectangle.
+
+        Returns:
+        - int: The area of the rectangle.
+
+        """
         return self.__width * self.__height
 
     """place holder documentation place holder documentation """
