@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 """handle module documentations"""
 import unittest
+"""getting the library responsible for testing"""
 from models.rectangle import Rectangle
+"""Getting the module that contains the class we are testing"""
 from models.base import Base
+"""Getting the module that contains the class we are testing inherits from"""
 from io import StringIO
+"""this is a support file used for outputs"""
 import sys
 """handling various files needed fot the tests"""
 
