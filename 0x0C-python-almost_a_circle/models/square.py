@@ -23,7 +23,7 @@ class Square(Rectangle):
         s_id = self.id
         s_x = self.x
         s_y = self.y
-        s_s = self.width
+        s_s = self.size
         return "[{}] ({}) {}/{} - {}".format(c_name, s_id, s_x, s_y, s_s)
 
     @property
@@ -32,10 +32,10 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """place holder documentation place holder documentation"""
-        self.width = size
-        self.height = size
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """place holder documentation place holder documentation"""
@@ -51,7 +51,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """place holder documentation place holder documentation"""
         return {'id': self.id,
-                'size': self.width,
+                'size': self.size,
                 'x': self.x,
                 'y': self.y
                 }
