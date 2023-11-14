@@ -76,7 +76,7 @@ class Rectangle(Base):
         Calculate and return the area of the rectangle.
 
         Returns:
-        - int: The area of the rectangle.
+        - The area of the rectangle.
 
         """
         return self.__width * self.__height
