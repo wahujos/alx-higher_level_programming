@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ documentation of the rectangle class that we inherit from"""
 from models.rectangle import Base
+""" documentation of the rectangle class that we inherit from"""
 from models.base import Rectangle
 """ documentation of the base class that we inherit from"""
 
