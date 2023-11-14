@@ -7,9 +7,11 @@ from models.base import Base
 class Rectangle(Base):
     """defining the class Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """defining the initialization method defining the initialization method"""
+        """defining the initialization method defining
+        the initialization method"""
         super().__init__(id)
-        """super class with super capabilities super class with super capabilities"""
+        """super class with super capabilities super
+        class with super capabilities"""
         self.width = width
         self.height = height
         self.x = x
@@ -73,9 +75,9 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    """place holder documentation place holder documentation 123456789"""
     def area(self):
-        """place holder documentation place holder documentation 123456789"""
+        """place holder documentation place holder documentation
+        123456789"""
         return self.__width * self.__height
 
     """place holder documentation place holder documentation """
@@ -89,7 +91,6 @@ class Rectangle(Base):
         for i in range(self.height):
             print(" " * self.x + "#" * self.width)
 
-    """place holder documentation place holder documentation """
     def __str__(self):
         """place holder documentation place holder documentation """
         c_name = __class__.__name__
