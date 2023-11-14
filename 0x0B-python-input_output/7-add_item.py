@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """defination of the modules"""
 import sys
+""" getting the sys content"""
  
 from '5-save_to_json_file' import save_to_json_file
+"""first file 5-save_to_json_file"""
 from '6-load_from_json_file' import load_from_json_file
+"""second 6-load_from_json_file """
 
 args = sys.argv[1:]
 load_list = []
