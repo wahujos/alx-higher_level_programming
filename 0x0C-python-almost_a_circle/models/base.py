@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """ handling documentations"""
+
+
 import json
-"""handling json files"""
+# handling json files"""
 
 
 class Base:
@@ -19,6 +21,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """This is function that convert to json string"""
         if list_dictionaries is None or list_dictionaries == {}:
             return "[]"
         else:
@@ -26,6 +29,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """This function converts to json string and writes to a file"""
         if list_objs is None:
             list_objs = []
         filename = "{}.json".format(cls.__name__)

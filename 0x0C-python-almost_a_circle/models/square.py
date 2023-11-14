@@ -39,11 +39,12 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """place holder documentation place holder documentation"""
-        if args:
+        if len(args) != 0:
             attributes = ['id', 'size', 'x', 'y']
             for i, value in enumerate(args):
-                setattr(self, attributes[i], value)
-        elif kwargs:
+                if i < len(attributes):
+                    setattr(self, attributes[i], value)
+        else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
