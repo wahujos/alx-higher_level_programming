@@ -31,10 +31,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """place holder documentation place holder documentation """
+
         return self.__width
 
     @width.setter
+    """place holder documentation place holder documentation """
     def width(self, value):
+        """place holder documentation place holder documentation """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -42,11 +46,14 @@ class Rectangle(Base):
         self.__width = value
 
     @property
+    """place holder documentation place holder documentation """
     def height(self):
+        """place holder documentation place holder documentation """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """place holder documentation place holder documentation """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -55,10 +62,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """place holder documentation place holder documentation """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """place holder documentation place holder documentation """
         if not isinstance(value, int):
             raise TypeError("x must be an interger")
         if value < 0:
@@ -67,10 +76,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """place holder documentation place holder documentation """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """place holder documentation place holder documentation """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -78,6 +89,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """place holder documentation place holder documentation """
         return self.__width * self.__height
 
     def display(self):
@@ -91,6 +103,7 @@ class Rectangle(Base):
             print(" " * self.x + "#" * self.width)
 
     def __str__(self):
+        """place holder documentation place holder documentation """
         c_name = __class__.__name__
         s_id = self.id
         x1 = self.x
@@ -100,6 +113,7 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}".format(c_name, s_id, x1, y1, w1, h1)
 
     def update(self, *args, **kwags):
+        """place holder documentation place holder documentation """
         if args:
             attributes_given = ['id', 'width', 'height', 'x', 'y']
             for i, value in enumerate(args):
@@ -109,6 +123,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """place holder documentation place holder documentation """
         return {'id': self.id,
                 'width': self.width,
                 'height': self.height,
