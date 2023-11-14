@@ -17,15 +17,6 @@ class Square(Rectangle):
         """Kindly dont remove this documentation its very important"""
         super().__init__(size, size, x, y, id)
 
-    def __str__(self):
-        """place holder documentation place holder documentation"""
-        c_name = __class__.__name__
-        s_id = self.id
-        s_x = self.x
-        s_y = self.y
-        s_s = self.size
-        return "[{}] ({}) {}/{} - {}".format(c_name, s_id, s_x, s_y, s_s)
-
     @property
     def size(self):
         """place holder documentation place holder documentation"""
@@ -55,3 +46,14 @@ class Square(Rectangle):
                 'x': self.x,
                 'y': self.y
                 }
+    
+    def __str__(self):
+        """place holder documentation place holder documentation"""
+        c_name = __class__.__name__
+        s_id = self.id
+        s_x = self.x
+        s_y = self.y
+        s_s = self.size
+        return "[{}] ({}) {}/{} - {}".format(c_name, s_id, s_x, s_y, s_s)
+
+
