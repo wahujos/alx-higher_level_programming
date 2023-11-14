@@ -7,32 +7,17 @@ from models.base import Base
 class Rectangle(Base):
     """defining the class Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """defining the initialization method defining the initialization method"""
         super().__init__(id)
-        '''if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        if width <= 0:
-            raise ValueError("width must be >= 0")'''
+        """super class with super capabilities super class with super capabilities"""
         self.width = width
-        '''if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        if height <= 0:
-            raise ValueError("height must be >= 0")'''
         self.height = height
-        '''if not isinstance(x, int):
-            raise TypeError("x must be an integer")
-        if x < 0:
-            raise ValueError("x must be >= 0")'''
         self.x = x
-        '''if not isinstance(y, int):
-            raise TypeError("y must be an integer")
-        if y < 0:
-            raise ValueError("y must be >= 0")'''
         self.y = y
 
     @property
     def width(self):
         """place holder documentation place holder documentation """
-
         return self.__width
 
     @width.setter
@@ -87,11 +72,13 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
     """place holder documentation place holder documentation 123456789"""
     def area(self):
         """place holder documentation place holder documentation 123456789"""
         return self.__width * self.__height
 
+    """place holder documentation place holder documentation """
     def display(self):
         """for i in range(self.__height):
             for j in range(self.__width):
@@ -102,6 +89,7 @@ class Rectangle(Base):
         for i in range(self.height):
             print(" " * self.x + "#" * self.width)
 
+    """place holder documentation place holder documentation """
     def __str__(self):
         """place holder documentation place holder documentation """
         c_name = __class__.__name__
