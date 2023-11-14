@@ -81,10 +81,8 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end='')
-            print()"""
+        """This is the function responsible for display of the shape in
+        different ways whether with or without offset."""
         for _ in range(self.y):
             print()
         for i in range(self.height):
