@@ -1,12 +1,18 @@
 #!/usr/bin/python3
+"""This module is for the square class that inherits from the
+rectangle class
+"""
+
+
 from models.rectangle import Rectangle
-""" documentation of the rectangle class that we inherit from"""
+# documentation of the rectangle class that we inherit from
 from models.base import Base
-""" documentation of the base class that we inherit from"""
+# documentation of the base class that we inherit from
 
 
 class Square(Rectangle):
     """defining the class square that inherits from Rectangle"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Kindly dont remove this documentation its very important"""
         super().__init__(size, size, x, y, id)
@@ -22,17 +28,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """place holder documentation place holder documentation """
+        """place holder documentation place holder documentation"""
         return self.width
 
     @size.setter
     def size(self, size):
-        """place holder documentation place holder documentation """
+        """place holder documentation place holder documentation"""
         self.width = size
         self.height = size
 
     def update(self, *args, **kwargs):
-        """place holder documentation place holder documentation """
+        """place holder documentation place holder documentation"""
         if args:
             attributes = ['id', 'size', 'x', 'y']
             for i, value in enumerate(args):
@@ -42,7 +48,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """place holder documentation place holder documentation """
+        """place holder documentation place holder documentation"""
         return {'id': self.id,
                 'size': self.width,
                 'x': self.x,
