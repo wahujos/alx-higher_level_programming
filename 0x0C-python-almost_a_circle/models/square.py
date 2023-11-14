@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """handle module docs"""
 from models.rectangle import Rectangle
+""" documentation of the rectangle class that we inherit from"""
+from models.base import Base
+""" documentation of the base class that we inherit from"""
+
 
 
 class Square(Rectangle):
