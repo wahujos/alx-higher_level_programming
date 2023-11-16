@@ -40,7 +40,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """A static method that returns the list of the json string representation"""
+        """A static method that returns the list of the json
+        string representation
+        """
         if json_string is None:
             return []
         else:
