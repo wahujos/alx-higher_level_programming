@@ -1,3 +1,3 @@
---command to show all databases
---List all Databases available
+-- command to show all databases
+-- List all Databases available
 SHOW DATABASES
