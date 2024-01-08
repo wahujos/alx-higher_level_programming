@@ -3,7 +3,7 @@
 
 'use strict';
 const argi = process.argv;
-if (argi.length <= 2) {
+if (argi.length < 2) {
   console.log('No argument');
 } else if (argi.length === 3) {
   console.log('Argument found');
