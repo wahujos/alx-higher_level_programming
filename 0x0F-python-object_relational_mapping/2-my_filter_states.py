@@ -11,8 +11,9 @@ if __name__ == "__main__":
                            db=sys.argv[3],
                            port=3306)
     cur = conn.cursor()
-    statename = sys.argv[4]
-    qr = "SELECT * FROM states WHERE name = '{}'".format(statename)
+    sname = sys.argv[4]
+    qr = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC" \
+        .format(sname)
     cur.execute(qr)
     states = cur.fetchall()
     for state in states:
