@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-"""Technical interview algorithm"""
-# finds a peak in a list of unsorted integers
+"""
+Technical interview algorithm
+finds a peak in a list of unsorted integers
+"""
+
+
 def find_peak(list_of_integers):
     """Find peak function algorith"""
     high = len(list_of_integers) - 1
