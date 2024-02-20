@@ -7,6 +7,6 @@ fs.writeFile(filePath, content, 'utf8', err => {
   if (err) {
     console.error(err);
   } else {
-    console.log(content);
+    console.log(fs.readFileSync(filePath, 'utf8'));
   }
 });
