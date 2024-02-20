@@ -1,3 +1,3 @@
--- command to show all databases
--- List all Databases available
-SHOW DATABASES
+--Script that lists all databases
+--List all databases available
+SHOW DATABASES;
